@@ -1,16 +1,87 @@
-# React + Vite
+# Labour Voice Web
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React + Vite web app for the LabourConnect voice interface.
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project is the frontend for labour voice interaction. It uses Vite, React 19, Tailwind CSS, and voice input/output utilities.
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React-based UI powered by Vite
+- Voice-to-text and text-to-speech support
+- Tailwind CSS styling and utility classes
+- ESLint configuration for code quality
 
-## Expanding the ESLint configuration
+## Prerequisites
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Node.js 20 or newer
+- npm (installed with Node.js)
+- Windows PowerShell may block `npm` scripts by default; use PowerShell or Command Prompt with the correct policy.
+
+## Setup
+
+1. Open a terminal in this folder:
+   - `labourconnect-main/labour-voice-web`
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+4. Open the app in your browser at the local URL shown in the terminal, typically:
+   - `http://localhost:5173`
+
+### PowerShell note
+
+If PowerShell blocks npm, run:
+
+```powershell
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+npm install
+```
+
+Or run `npm` directly using the npm command file:
+
+```powershell
+& "C:\Program Files\nodejs\npm.cmd" install
+```
+
+## Scripts
+
+- `npm run dev` - start the local development server
+- `npm run build` - build the production app
+- `npm run preview` - preview the production build locally
+- `npm run lint` - run ESLint across the project
+
+## Project structure
+
+- `src/` - main React application source files
+- `src/components/` - reusable UI components
+- `src/voice/` - voice input/output helpers
+- `public/` - static assets served by Vite
+- `package.json` - scripts and dependencies
+- `vite.config.js` - Vite configuration
+
+## Notes
+
+- This app is configured as a private project (`private: true`).
+- If you change dependencies, re-run `npm install`.
+
+## Contributing
+
+If you want to improve this project:
+
+1. Create a new branch
+2. Add or update components in `src/`
+3. Run `npm run lint`
+4. Test the app with `npm run dev`
+
+## License
+
+Use this project as needed for your own development.
